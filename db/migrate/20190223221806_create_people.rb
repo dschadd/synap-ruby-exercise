@@ -5,6 +5,8 @@ class CreatePeople < ActiveRecord::Migration[5.2]
       t.string :job_title
       t.string :email_address
       t.string :phone
+      t.integer :organization_id
+      t.integer :address_id
 
       t.timestamps
     end
