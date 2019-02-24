@@ -1,12 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 [logo]: https://getsynap.com/img/logos/synap_itg_lockup-1069e32b.png "Synap Logo"
+
 # Synap CRM
+![alt text][logo]
 
 * The Synap CRM runs on Ruby 2.5.1
 
