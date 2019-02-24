@@ -5,20 +5,19 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+[logo]: https://getsynap.com/img/logos/synap_itg_lockup-1069e32b.png "Synap Logo"
+# Synap CRM
 
-* System dependencies
+* The Synap CRM runs on Ruby 2.5.1
 
-* Configuration
+* This application requires the jbuilder and postgres gems
 
-* Database creation
+* Fork this repo into your own Github repository
 
-* Database initialization
+* Run "rails db:create" in your command line. Run "rails db:migrate" in your command line.
 
-* How to run the test suite
+  * Double check that you are running PostgreSQL (not SQLite) in your database.yml file and in your Gemfile
 
-* Services (job queues, cache servers, search engines, etc.)
+* Place a copy of the CSV file you would like to seed the database in App>Lib>Seeds
 
-* Deployment instructions
-
-* ...
+* Run "rails db:seed" in your command line. Use the Rails console to confirm the database was seeded correctly with ActiveRecord querying.
