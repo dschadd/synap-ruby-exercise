@@ -1,0 +1,501 @@
+Searching 1412 files for "api"
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/Gemfile:
+   10  # Use Puma as the app server
+   11  gem 'puma', '~> 3.11'
+   12: # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+   13  # gem 'jbuilder', '~> 2.5'
+   14  # Use Redis adapter to run Action Cable in production
+   ..
+   20  # gem 'mini_magick', '~> 4.8'
+   21  
+   22: # Use Capistrano for deployment
+   23: # gem 'capistrano-rails', group: :development
+   24  
+   25  # Reduces boot times through caching; required in config/boot.rb
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/Rakefile:
+    1  # Add your own tasks in files placed in lib/tasks ending in .rake,
+    2: # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+    3  
+    4  require_relative 'config/application'
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/app/controllers/application_controller.rb:
+    1: class ApplicationController < ActionController::API
+    2  end
+    3  
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/app/controllers/api/organizations_controller.rb:
+    1: class api::OrganizationsController < ApplicationController
+    2  end
+    3  
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/app/controllers/api/people_controller.rb:
+    1: class api::PeopleController < ApplicationController
+    2  
+    3    def index
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/config/application.rb:
+   28      # the framework and any gems in your application.
+   29  
+   30:     # Only loads a smaller set of middleware suitable for API only apps.
+   31      # Middleware like session, flash, cookies can be added back manually.
+   32      # Skip views, helpers and assets when generating a new resource.
+   33:     config.api_only = true
+   34    end
+   35  end
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/config/routes.rb:
+    2    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    3  
+    4:   namespace :api do
+    5  
+    6      get "/people" => "people#index"
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/config/initializers/cors.rb:
+    1  # Be sure to restart your server when you modify this file.
+    2  
+    3: # Avoid CORS issues when API is called from the frontend app.
+    4  # Handle Cross-Origin Resource Sharing (CORS) in order to accept cross-origin AJAX requests.
+    5  
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/lib/seeds/crm_exercise_data.csv:
+   59  Jimmie Heaney,Senior Marketing Supervisor,jheaney@buckridge.co,,Goldner-Hudson,(785) 651-2429 x2193,buckridge.co,9361 Purdy Dale,Murphyborough,WA,00210-6672
+   60  Hal Abshire,Marketing Developer,habshire@auer.co,5748487627,Auer-Williamson,(734) 714-3254,auer.co,48395 Edward Unions,North Hal,NC,14419-0693
+   61: Jenny Turcotte,Legacy Technician,jenny.turcotte@kohler.io,615-763-5637,Williamson-Rau,408 775-6508,kohler.io,7052 Powlowski Rapid,Port Daniel,MO,68296
+   62  Kathy Hessel,National Developer,khessel@schimmel.net,414 406-6470,Mante LLC,816 502-2204,schimmel.net,15385 Larson Road,New Shawntaside,Colorado,06412
+   63  Fritz Schimmel,Marketing Specialist,fschimmel@moore-feeney-and-dare.net,2057313281,"Moore, Feeney and Dare",973 557-2036,moore-feeney-and-dare.net,78352 Rippin Throughway,East Olin,DE,24215-7438
+   ..
+  118  Bea Windler,Banking Facilitator,bea.windler@conf.org,(563) 608-2972,Conroy-Farrell,540 865-4086,conf.org,6383 Rubin Roads,Kunzeview,MN,71308
+  119  Shenika Aufderhar,District Community-Services Director,saufderhar@stpanm.org,9083150966,"Stroman, Predovic and Murazik",4244789674,stpanm.org,68688 Strosin Mountains,West Joseberg,MA,02820-4412
+  120: Thomas Huel,Marketing Technician,thomas.huel@lein.io,937-803-6588,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  121  Ward McKenzie,Regional Manufacturing Facilitator,ward.mckenzie@uphopanki.co,406 580-6642,"Upton, Hoppe and Kirlin",408-912-6706 x5253,uphopanki.co,6086 Hipolito Glen,Naderport,IL,23614-4172
+  122  Elisha Crooks,Direct Marketing Agent,elisha.crooks@kshlerin.biz,8064011543,"Sawayn, Gibson and Baumbach",3174129936,kshlerin.biz,5993 Kelley Prairie,Ziemeshire,OR,75338-2315
+  ...
+  178  Twila Pfeffer,Legacy Real-Estate Manager,tpfeffer@scmoawe.org,832 817-2478,"Schiller, Mosciski and Weimann",5598503659,scmoawe.org,,,,
+  179  Hayden Goyette,Legacy Liaison,hgoyette@wuckert.biz,4253016664,"Hoppe, Prohaska and Cartwright",7248166668,wuckert.biz,,,,
+  180: Matilda Fritsch,Government Orchestrator,matilda.fritsch@lein.io,5679037446,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  181  Arlen Renner,Administration Facilitator,arlen.renner@roberts-kuvalis-and-schultz.org,563.904.9773,"Roberts, Kuvalis and Schultz",2064015802,roberts-kuvalis-and-schultz.org,789 Bruen Corner,North Mark,Montana,02617-5382
+  182  Chase Mertz,National IT Director,cmertz@metz-botsford.us,,Metz-Botsford,9088304681,metz-botsford.us,672 Metz Village,Bradyborough,VT,89680-8697
+  ...
+  407  Vicente Mosciski,Farming Facilitator,vmosciski@metz-botsford.us,702 667-6348,Metz-Botsford,9088304681,metz-botsford.us,672 Metz Village,Bradyborough,VT,89680-8697
+  408  Wilton Jacobs,Sales Executive,wilton.jacobs@littlemonahan.name,(352) 856-4462,"Watsica, Smitham and Collier",786-662-1814,littlemonahan.name,5954 Corwin Forges,Lake Rodrickton,New Jersey,97971-2431
+  409: Mac Zboncak,Internal Administrator,mac.zboncak@lein.io,(351) 225-4599,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  410  Assunta Nicolas,Human Banking Technician,anicolas@miller-llc.us,,Miller LLC,3122816954,miller-llc.us,78737 Hintz Hollow,Lucianaland,MO,22526-3431
+  411  Roberta Robel,Direct Technology Developer,rrobel@howe.net,,"Hudson, Dietrich and Gleichner",304-718-5254,howe.net,45214 Abbott Fords,Charlottville,Texas,55381
+  ...
+  429  Leticia Fahey,National Marketing Specialist,leticia.fahey@klockorodriguez.biz,901 256-4540,Weber and Sons,276-334-7610,klockorodriguez.biz,2731 Stephane Skyway,Wardbury,Texas,49758-2408
+  430  Eda Crooks,Human Analyst,ecrooks@schiller.org,"","Kohler, Purdy and Lockman",415 712-1256,schiller.org,23880 Schoen Junctions,Romagueraborough,West Virginia,02938-3110
+  431: Roseanne Kirlin,Regional Sales Developer,roseanne.kirlin@lein.io,636-317-0057 x7206,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  432  Tomiko Bartell,Chief Education Assistant,tomiko.bartell@bahringer.co,6517135972,Bahringer-Cummerata,229.386.6119,bahringer.co,802 Wendell Estates,South Therese,North Carolina,82760-4914
+  433  Emiko Littel,Education Developer,elittel@auer.co,,Auer-Williamson,(734) 714-3254,auer.co,48395 Edward Unions,North Hal,NC,14419-0693
+  434: Pedro Schinner,Regional Marketing Coordinator,pedro.schinner@lein.io,"",Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  435  Carolee Trantow,Senior Advertising Associate,carolee.trantow@west-group.biz,413 206-8731,West Group,765 650-9285,west-group.biz,137 Hand Mountain,Lake Rachelleview,LA,66482-3511
+  436  Roy Walter,Legacy Liaison,roy.walter@pouros.org,408-405-0027 x5103,Stehr-Stamm,6194141757,pouros.org,4879 Billie Pine,South Bobbie,MI,91742-1943
+  ...
+  468  Rhiannon Bins,Central Analyst,rhiannon.bins@walsh.info,(502) 530-3877,"Walsh, Jaskolski and Block",909.727.8177,walsh.info,980 Eleanora Corner,Lasonyatown,North Carolina,14226
+  469  Brandee Schuster,Regional Banking Coordinator,bschuster@volkman.net,3158645036,"Volkman, Dibbert and Rippin",949-775-0303,volkman.net,70712 Bergstrom Cliffs,North Pia,AL,30226-3592
+  470: Maude Moen,Global Producer,maude.moen@lein.io,"",Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  471  Philomena McCullough,IT Liaison,pmccullough@volkman-tremblay-and-bins.org,(731) 765-5907,"Volkman, Tremblay and Bins",516-754-8751,volkman-tremblay-and-bins.org,20915 Merlin Wells,Auerfort,South Dakota,08840
+  472  Kristel Adams,Global Planner,kristel.adams@ohancr.co,351-219-6751,"Ondricka, Hermann and Cruickshank",435-909-9191,ohancr.co,565 Medhurst Rest,South Jamaalborough,Rhode Island,92512
+  473  Marshall Boyle,Regional Farming Consultant,mboyle@auer.co,(360) 732-9344 x6094,Auer-Williamson,(734) 714-3254,auer.co,48395 Edward Unions,North Hal,NC,14419-0693
+  474  Celina Purdy,Central Planner,celina.purdy@mclaughlin.us,"",McLaughlin Inc,262 720-5134,mclaughlin.us,7429 Murray Parkways,Hoppehaven,Pennsylvania,56347-9734
+  475: Jung McKenzie,Marketing Supervisor,jung.mckenzie@lein.io,"",Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  476  Alec King,Healthcare Supervisor,aking@labadie-prosacco.org,,Labadie-Prosacco,6204347138,labadie-prosacco.org,4117 Mertz Land,North Maudeburgh,California,98390
+  477: Paula McGlynn,Future Education Technician,paula.mcglynn@lein.io,507 337-7785,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  478  Rachel MacGyver,Internal Accounting Director,rachel.macgyver@leuschke-group.co,,Leuschke Group,805-509-6514,leuschke-group.co,82905 Necole Way,New Michalebury,Nevada,38498
+  479  Shane Treutel,Lead Hospitality Specialist,streutel@ancro.co,,Ankunding-Cronin,408-520-6052,ancro.co,43251 Gerald Unions,East Cecil,MA,89977-0416
+  ...
+  499  Tanna Gerlach,Accounting Facilitator,tanna.gerlach@kuhic.name,"","Brown, Walker and Nolan",(413) 863-3126 x3989,kuhic.name,,,,
+  500  Latonia Roob,Design Agent,lroob@labadie-prosacco.org,808-619-6275,Labadie-Prosacco,6204347138,labadie-prosacco.org,4117 Mertz Land,North Maudeburgh,California,98390
+  501: Shanel Mante,Customer Government Developer,shanel.mante@lein.io,763-213-2169 x1221,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  502  Jarrett Dibbert,Lead Marketing Coordinator,jarrett.dibbert@rippin.co,3053202054,Grant-Gottlieb,3202039218,rippin.co,9615 Steuber Prairie,New Nedaberg,Idaho,05709-8837
+  503  Major Stroman,Regional Producer,mstroman@buckridge.co,"",Goldner-Hudson,(785) 651-2429 x2193,buckridge.co,9361 Purdy Dale,Murphyborough,WA,00210-6672
+  ...
+  574  Andrea Mann,Chief IT Executive,andrea.mann@koepp.biz,,Koepp LLC,410 213-0681,koepp.biz,8684 Sawayn Road,Lake Lavera,MN,99650
+  575  Latoyia Frami,Corporate Developer,latoyia.frami@farrell-ziemann-and-feil.name,716.715.4098,"Farrell, Ziemann and Feil",229.314.1203 x1521,farrell-ziemann-and-feil.name,,,,
+  576: Idell Herzog,Legacy Manager,idell.herzog@lein.io,"",Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  577  Carlton Lynch,Banking Specialist,clynch@bins.info,"",Bins Inc,561 863-8784,bins.info,77187 Stephanie Heights,Etheleneshire,CO,34257
+  578  Stewart Bruen,Future Farming Officer,sbruen@schuppe.com,301.216.4929 x8544,"Schuppe, Gaylord and Emard",8148083698,schuppe.com,6516 Thresa Throughway,South Willieburgh,North Carolina,12395
+  ...
+  639  Alfonzo Hammes,Mining Liaison,alfonzo.hammes@schultz.net,"",Schultz-Wunsch,8635137586,schultz.net,223 Kunze Mountains,North Faustino,OK,00717
+  640  Kathyrn Boyle,Administration Officer,kboyle@volkman-and-sons.name,417.832.2970 x9161,Volkman and Sons,720 352-5791,volkman-and-sons.name,,,,
+  641: Larae Fritsch,Global Director,larae.fritsch@lein.io,,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  642  Danial Kirlin,Senior Sales Producer,dkirlin@howe.net,"","Hudson, Dietrich and Gleichner",304-718-5254,howe.net,45214 Abbott Fords,Charlottville,Texas,55381
+  643  Mana Gorczany,Investor Farming Orchestrator,mgorczany@scmoawe.org,(256) 915-4700,"Schiller, Mosciski and Weimann",5598503659,scmoawe.org,,,,
+  ...
+  672  Chris Schoen,Global Real-Estate Specialist,chris.schoen@dickens-kreiger.us,580-810-6630,Dickens-Kreiger,(205) 717-3357,dickens-kreiger.us,,,,
+  673  Lilla Halvorson,Banking Strategist,lhalvorson@wisozk.net,,Reynolds Group,5048437051,wisozk.net,9372 Mui Ports,Haydenmouth,Texas,09519
+  674: Agatha Schmitt,Administration Technician,agatha.schmitt@lein.io,5633865635,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  675  Glenna Homenick,Advertising Representative,glenna.homenick@torp-macejkovic-and-jones.us,,"Torp, Macejkovic and Jones",731-667-3161 x9867,torp-macejkovic-and-jones.us,8153 Alden Keys,West Charlie,AR,19561-3024
+  676  Bo Runte,Customer Representative,bo.runte@rippin.co,804-781-8889,Grant-Gottlieb,3202039218,rippin.co,9615 Steuber Prairie,New Nedaberg,Idaho,05709-8837
+  ...
+  684  Zenaida Bashirian,Consulting Officer,zenaida.bashirian@kuvalis-zieme-and-roberts.org,954 402-9627,"Kuvalis, Zieme and Roberts",937 630-3532,kuvalis-zieme-and-roberts.org,,,,
+  685  Elfreda Langworth,Dynamic Advertising Officer,elfreda.langworth@leuschke-group.co,(936) 850-5066 x0852,Leuschke Group,805-509-6514,leuschke-group.co,82905 Necole Way,New Michalebury,Nevada,38498
+  686: Levi Dicki,Principal Administration Assistant,levi.dicki@lein.io,6616109125,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  687  Maynard DuBuque,Forward Mining Engineer,maynard.dubuque@metz.net,,Schroeder LLC,4358323221,metz.net,57915 Fanny Port,Feestbury,Missouri,43727-8133
+  688  Kelvin Bradtke,Corporate Mining Architect,kbradtke@cremin.info,,Cremin and Sons,9792690054,cremin.info,3807 Johnston Curve,East Brandyside,South Carolina,53844-4505
+  ...
+  715  Stephen Heaney,Regional Marketing Agent,sheaney@scmoawe.org,,"Schiller, Mosciski and Weimann",5598503659,scmoawe.org,,,,
+  716  Ashlea Volkman,Lead Administration Producer,ashlea.volkman@schultz.net,270 636-5060,Schultz-Wunsch,8635137586,schultz.net,223 Kunze Mountains,North Faustino,OK,00717
+  717: Norris Hermiston,Marketing Supervisor,norris.hermiston@lein.io,,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  718  Pete Zulauf,Design Executive,pzulauf@labadie-prosacco.org,"",Labadie-Prosacco,6204347138,labadie-prosacco.org,4117 Mertz Land,North Maudeburgh,California,98390
+  719  Hubert Parker,Global Planner,hubert.parker@walsh.info,,"Walsh, Jaskolski and Block",909.727.8177,walsh.info,980 Eleanora Corner,Lasonyatown,North Carolina,14226
+  ...
+  848  Liberty Spencer,Forward Marketing Designer,liberty.spencer@dickens-kreiger.us,610 480-9212,Dickens-Kreiger,(205) 717-3357,dickens-kreiger.us,,,,
+  849  Gustavo Kris,Chief Banking Coordinator,gkris@howe.net,252-606-5260,"Hudson, Dietrich and Gleichner",304-718-5254,howe.net,45214 Abbott Fords,Charlottville,Texas,55381
+  850: Dolores Marquardt,Government Facilitator,dolores.marquardt@lein.io,913-225-3077,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+  851  Zackary Farrell,Construction Specialist,zackary.farrell@krc.name,"",Kreiger-Considine,3084246985,krc.name,70441 Stephan Harbor,Angilachester,MO,39613-0586
+  852  Judi Ferry,Legacy Retail Engineer,jferry@pfqui.info,806 419-2870,Pfannerstill-Quigley,8044135373,pfqui.info,78434 Shondra Islands,Nitzscheport,South Dakota,05966-2151
+  ...
+ 1006  Elmer Collier,Corporate Architect,elmer.collier@leuschke-group.co,636-701-0865,Leuschke Group,805-509-6514,leuschke-group.co,82905 Necole Way,New Michalebury,Nevada,38498
+ 1007  Hue Lind,Legacy Construction Facilitator,hlind@volkman-tremblay-and-bins.org,"","Volkman, Tremblay and Bins",516-754-8751,volkman-tremblay-and-bins.org,20915 Merlin Wells,Auerfort,South Dakota,08840
+ 1008: Winford Wisoky,Farming Designer,winford.wisoky@lein.io,848.918.5166,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1009  Taylor Hayes,Design Consultant,thayes@volkman-tremblay-and-bins.org,8649121116,"Volkman, Tremblay and Bins",516-754-8751,volkman-tremblay-and-bins.org,20915 Merlin Wells,Auerfort,South Dakota,08840
+ 1010  Elijah Stracke,Future Real-Estate Engineer,elijah.stracke@koepp.biz,202 601-8509,Koepp LLC,410 213-0681,koepp.biz,8684 Sawayn Road,Lake Lavera,MN,99650
+ ....
+ 1016  Geoffrey Leuschke,Future Farming Representative,gleuschke@denesik-hand-and-harvey.net,954-931-3626 x6006,"Denesik, Hand and Harvey",3518032657,denesik-hand-and-harvey.net,52818 Carissa Landing,Priceland,Montana,94821
+ 1017  Eloise Will,Manufacturing Assistant,eloise.will@rippin.co,"",Grant-Gottlieb,3202039218,rippin.co,9615 Steuber Prairie,New Nedaberg,Idaho,05709-8837
+ 1018: Marleen West,Mining Strategist,marleen.west@lein.io,612-912-8985,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1019  Trevor Bins,Mining Supervisor,tbins@thc.co,605-980-5954,Thiel-Collier,585-952-3798 x6433,thc.co,2620 Gino Crossroad,North Vincenza,Ohio,81012
+ 1020  Donnie Reichel,Principal Healthcare Analyst,dreichel@labadie-prosacco.org,"",Labadie-Prosacco,6204347138,labadie-prosacco.org,4117 Mertz Land,North Maudeburgh,California,98390
+ ....
+ 1031  Britt Dicki,Senior Advertising Technician,britt.dicki@klockorodriguez.biz,202-464-5891,Weber and Sons,276-334-7610,klockorodriguez.biz,2731 Stephane Skyway,Wardbury,Texas,49758-2408
+ 1032  Darcey Hessel,Direct Hospitality Liaison,darcey.hessel@litin.com,(308) 817-8394,Littel Inc,9419793273,litin.com,,,,
+ 1033: Joan Stokes,Internal Real-Estate Specialist,joan.stokes@lein.io,"",Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1034  Nakesha Jones,Future Government Agent,nakesha.jones@uphopanki.co,4238436891,"Upton, Hoppe and Kirlin",408-912-6706 x5253,uphopanki.co,6086 Hipolito Glen,Naderport,IL,23614-4172
+ 1035  Luna Considine,Construction Consultant,lconsidine@bins.info,"",Bins Inc,561 863-8784,bins.info,77187 Stephanie Heights,Etheleneshire,CO,34257
+ ....
+ 1038  Dino Sanford,Marketing Engineer,dino.sanford@kuvalis-zieme-and-roberts.org,,"Kuvalis, Zieme and Roberts",937 630-3532,kuvalis-zieme-and-roberts.org,,,,
+ 1039  Laverne Dickinson,Mining Producer,ldickinson@cremin.info,,Cremin and Sons,9792690054,cremin.info,3807 Johnston Curve,East Brandyside,South Carolina,53844-4505
+ 1040: Gina Dickinson,Regional Marketing Administrator,gina.dickinson@lein.io,(732) 240-9628 x6041,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1041  Lesia Jenkins,Chief Design Consultant,lesia.jenkins@kuvalis.com,213-507-5681,Kuvalis-Hahn,3149136769,kuvalis.com,485 Kim Ways,East Domingo,Nebraska,48709
+ 1042  Carmelo Kunde,Senior Healthcare Director,carmelo.kunde@orn-greenholt-and-bogan.name,973 925-8678,"Orn, Greenholt and Bogan",847 469-0311,orn-greenholt-and-bogan.name,886 Towne Points,West Luke,New Hampshire,47511
+ ....
+ 1169  Pedro Reilly,Human Manager,pedro.reilly@ohancr.co,508-928-7056,"Ondricka, Hermann and Cruickshank",435-909-9191,ohancr.co,565 Medhurst Rest,South Jamaalborough,Rhode Island,92512
+ 1170  Arturo DuBuque,Central Sales Associate,arturo.dubuque@orn-greenholt-and-bogan.name,9544343772,"Orn, Greenholt and Bogan",847 469-0311,orn-greenholt-and-bogan.name,886 Towne Points,West Luke,New Hampshire,47511
+ 1171: Stanford Bernier,Design Facilitator,stanford.bernier@lein.io,469 254-2486,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1172  Dominick Dare,Global Real-Estate Orchestrator,dominick.dare@kuvalis.com,(803) 212-3550,Kuvalis-Hahn,3149136769,kuvalis.com,485 Kim Ways,East Domingo,Nebraska,48709
+ 1173  Nancey Bradtke,Legacy Real-Estate Coordinator,nancey.bradtke@orn-greenholt-and-bogan.name,"","Orn, Greenholt and Bogan",847 469-0311,orn-greenholt-and-bogan.name,886 Towne Points,West Luke,New Hampshire,47511
+ ....
+ 1274  Nancey Kuhn,Accounting Developer,nkuhn@schiller.org,785-510-7180,"Kohler, Purdy and Lockman",415 712-1256,schiller.org,23880 Schoen Junctions,Romagueraborough,West Virginia,02938-3110
+ 1275  Aisha Harvey,Lead Hospitality Assistant,aharvey@boehm.biz,2173236935,"Welch, Sawayn and Daugherty",615-318-2283,boehm.biz,84730 Jerde Greens,Lake Chadstad,Mississippi,88445
+ 1276: Bryon Kiehn,District Legal Technician,bryon.kiehn@lein.io,,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1277  Pamelia Rath,Legacy Advertising Coordinator,pamelia.rath@walsh.info,765 804-7299,"Walsh, Jaskolski and Block",909.727.8177,walsh.info,980 Eleanora Corner,Lasonyatown,North Carolina,14226
+ 1278  Charlie Wolff,Senior Advertising Assistant,cwolff@metz-botsford.us,806-715-6580,Metz-Botsford,9088304681,metz-botsford.us,672 Metz Village,Bradyborough,VT,89680-8697
+ ....
+ 1306  Russ Jacobs,Senior Liaison,rjacobs@bauin.name,910-559-6445,Baumbach Inc,8127746407,bauin.name,512 Hartmann Shoal,North Benedicthaven,IN,46764
+ 1307  Argelia Reinger,Accounting Liaison,argelia.reinger@kshlerin.biz,"","Sawayn, Gibson and Baumbach",3174129936,kshlerin.biz,5993 Kelley Prairie,Ziemeshire,OR,75338-2315
+ 1308: Verena Schinner,Sales Architect,verena.schinner@lein.io,(409) 410-0785,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1309  Frederick Barrows,Internal IT Consultant,fbarrows@bins.co,415 870-4334,Bins-Cruickshank,9252298213,bins.co,2074 Kristina Pines,Hammesbury,Illinois,12930-7208
+ 1310  Liz Huel,Global Administration Producer,liz.huel@schultz.net,,Schultz-Wunsch,8635137586,schultz.net,223 Kunze Mountains,North Faustino,OK,00717
+ ....
+ 1421  Ezra Reichel,IT Supervisor,ezra.reichel@litin.com,317-806-4967 x8721,Littel Inc,9419793273,litin.com,,,,
+ 1422  Marci Homenick,Farming Assistant,marci.homenick@dickens-kreiger.us,6019787391,Dickens-Kreiger,(205) 717-3357,dickens-kreiger.us,,,,
+ 1423: Arletta Gerhold,Retail Manager,arletta.gerhold@kohler.io,580.254.7826 x6943,Williamson-Rau,408 775-6508,kohler.io,7052 Powlowski Rapid,Port Daniel,MO,68296
+ 1424  Nakita Zieme,Advertising Agent,nzieme@denesik-hand-and-harvey.net,216 737-5471,"Denesik, Hand and Harvey",3518032657,denesik-hand-and-harvey.net,52818 Carissa Landing,Priceland,Montana,94821
+ 1425  Darryl Bins,Real-Estate Planner,darryl.bins@goinc.com,5012168397,Goyette Inc,702 225-7804,goinc.com,93181 Eloy Forest,Lake Ervinville,TN,93986
+ ....
+ 1429  Len D'Amore,Marketing Consultant,len.d'amore@pouros.org,859.870.3651,Stehr-Stamm,6194141757,pouros.org,4879 Billie Pine,South Bobbie,MI,91742-1943
+ 1430  Jessie Nolan,Global Legal Executive,jessie.nolan@dickens-kreiger.us,863-985-9630,Dickens-Kreiger,(205) 717-3357,dickens-kreiger.us,,,,
+ 1431: Quincy Schinner,Dynamic IT Agent,quincy.schinner@kohler.io,"",Williamson-Rau,408 775-6508,kohler.io,7052 Powlowski Rapid,Port Daniel,MO,68296
+ 1432  Rosanne Reynolds,Advertising Liaison,rosanne.reynolds@orn-greenholt-and-bogan.name,2629011288,"Orn, Greenholt and Bogan",847 469-0311,orn-greenholt-and-bogan.name,886 Towne Points,West Luke,New Hampshire,47511
+ 1433  Haywood Donnelly,Technology Analyst,hdonnelly@scgo.io,863-863-0783,Schultz-Gorczany,9563052717,scgo.io,4665 Ashley Extension,New Armando,CA,06234
+ ....
+ 1476  Benito Kessler,National Marketing Manager,benito.kessler@monahan.us,,Monahan-Herzog,480 970-7500,monahan.us,22180 Block Forge,Virgiechester,Michigan,23396
+ 1477  Monroe Bartoletti,Direct Director,mbartoletti@schuppe.com,660-507-6367,"Schuppe, Gaylord and Emard",8148083698,schuppe.com,6516 Thresa Throughway,South Willieburgh,North Carolina,12395
+ 1478: Jessie Konopelski,Principal Accounting Technician,jessie.konopelski@lein.io,6198471984,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1479  Andrea Gleichner,Sales Officer,andrea.gleichner@monahan.us,952-551-9062,Monahan-Herzog,480 970-7500,monahan.us,22180 Block Forge,Virgiechester,Michigan,23396
+ 1480  Luis Hayes,Regional Consultant,luis.hayes@dickens-kreiger.us,832.517.4381,Dickens-Kreiger,(205) 717-3357,dickens-kreiger.us,,,,
+ ....
+ 1531  Ezekiel Greenfelder,Central Government Officer,egreenfelder@thc.co,314-971-2324 x6830,Thiel-Collier,585-952-3798 x6433,thc.co,2620 Gino Crossroad,North Vincenza,Ohio,81012
+ 1532  Sophia Brekke,Manufacturing Coordinator,sbrekke@wisozk.net,5412153679,Reynolds Group,5048437051,wisozk.net,9372 Mui Ports,Haydenmouth,Texas,09519
+ 1533: Lekisha Lakin,Banking Manager,lekisha.lakin@lein.io,404 586-5052,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1534  Glenn Walsh,Senior Farming Architect,glenn.walsh@rippin.co,940 319-1784,Grant-Gottlieb,3202039218,rippin.co,9615 Steuber Prairie,New Nedaberg,Idaho,05709-8837
+ 1535  Orville Romaguera,International Administration Consultant,oromaguera@wuckert.biz,(580) 716-9605 x4124,"Hoppe, Prohaska and Cartwright",7248166668,wuckert.biz,,,,
+ ....
+ 1537  Manuel Parker,Product Real-Estate Designer,manuel.parker@kshlerin.biz,,"Sawayn, Gibson and Baumbach",3174129936,kshlerin.biz,5993 Kelley Prairie,Ziemeshire,OR,75338-2315
+ 1538  Sigrid Dicki,Forward Legal Designer,sigrid.dicki@metz.net,857 276-1519,Schroeder LLC,4358323221,metz.net,57915 Fanny Port,Feestbury,Missouri,43727-8133
+ 1539: Carmen Yundt,Real-Estate Supervisor,carmen.yundt@lein.io,,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1540  Lane Casper,Forward Officer,lcasper@labadie-prosacco.org,2149319028,Labadie-Prosacco,6204347138,labadie-prosacco.org,4117 Mertz Land,North Maudeburgh,California,98390
+ 1541  Neda Paucek,Lead Education Executive,neda.paucek@rippin.co,830 331-1717,Grant-Gottlieb,3202039218,rippin.co,9615 Steuber Prairie,New Nedaberg,Idaho,05709-8837
+ ....
+ 1553  Marcell Batz,Senior Agent,marcell.batz@mclaughlin.us,"",McLaughlin Inc,262 720-5134,mclaughlin.us,7429 Murray Parkways,Hoppehaven,Pennsylvania,56347-9734
+ 1554  Myron Funk,Legal Consultant,mfunk@lynch.us,813 217-6550,Lynch-Kemmer,402-910-4519 x2505,lynch.us,4593 Daniela Pike,Port Lanahaven,KS,56106-9655
+ 1555: Catherin Johnston,Corporate Marketing Agent,catherin.johnston@lein.io,(586) 276-1940 x8133,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1556  Mark Tillman,Principal Healthcare Supervisor,mtillman@wuckert.biz,(508) 601-7272,"Hoppe, Prohaska and Cartwright",7248166668,wuckert.biz,,,,
+ 1557  Neville McDermott,Manufacturing Designer,nmcdermott@grady-stoltenberg.org,417 303-0692,Grady-Stoltenberg,828 445-8179,grady-stoltenberg.org,,,,
+ ....
+ 1572  Zachariah Beahan,National Marketing Specialist,zbeahan@anderson-and-sons.org,"",Anderson and Sons,(608) 812-6083,anderson-and-sons.org,6599 Beier Estates,Dewaynemouth,DE,42829-3404
+ 1573  Verlene Ryan,Global Mining Coordinator,vryan@metz-botsford.us,"",Metz-Botsford,9088304681,metz-botsford.us,672 Metz Village,Bradyborough,VT,89680-8697
+ 1574: Fausto Corkery,Mining Producer,fausto.corkery@lein.io,541-618-7880,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1575: Carrol Frami,Manufacturing Specialist,carrol.frami@lein.io,214 262-9035,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1576  Leigh Hyatt,Dynamic Advertising Liaison,lhyatt@blandasimonis.info,607 585-6623,Kozey Group,406 213-7341,blandasimonis.info,4927 Bergnaum Spring,Port Ty,NV,78250
+ 1577  Shannon Brown,Consulting Representative,sbrown@auer.co,,Auer-Williamson,(734) 714-3254,auer.co,48395 Edward Unions,North Hal,NC,14419-0693
+ ....
+ 1611  Michell Bartell,Dynamic Advertising Specialist,mbartell@scgo.io,(717) 940-0987,Schultz-Gorczany,9563052717,scgo.io,4665 Ashley Extension,New Armando,CA,06234
+ 1612  Linn Cronin,International Sales Designer,lcronin@schowalter.biz,320 865-5211,Mraz-Altenwerth,(904) 229-5298 x0877,schowalter.biz,30525 Zemlak Ports,Renaldoberg,Virginia,71837-0564
+ 1613: Isreal Hansen,District Real-Estate Orchestrator,isreal.hansen@lein.io,3206366899,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1614  Josefa Jaskolski,Construction Specialist,jjaskolski@cremin.info,,Cremin and Sons,9792690054,cremin.info,3807 Johnston Curve,East Brandyside,South Carolina,53844-4505
+ 1615  Cary DuBuque,Future Mining Developer,cary.dubuque@roberts-kuvalis-and-schultz.org,252 228-2994,"Roberts, Kuvalis and Schultz",2064015802,roberts-kuvalis-and-schultz.org,789 Bruen Corner,North Mark,Montana,02617-5382
+ ....
+ 1744  Elmo Hane,Customer Marketing Executive,ehane@bins.info,2627343246,Bins Inc,561 863-8784,bins.info,77187 Stephanie Heights,Etheleneshire,CO,34257
+ 1745  Owen Lubowitz,Manufacturing Facilitator,owen.lubowitz@pouros.org,626 201-3691,Stehr-Stamm,6194141757,pouros.org,4879 Billie Pine,South Bobbie,MI,91742-1943
+ 1746: Guillermina Hackett,IT Coordinator,guillermina.hackett@lein.io,,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1747  Laurette Brakus,Central Healthcare Liaison,lbrakus@wisozk.net,,Reynolds Group,5048437051,wisozk.net,9372 Mui Ports,Haydenmouth,Texas,09519
+ 1748  Adolph Waelchi,Lead Healthcare Strategist,awaelchi@volkman-tremblay-and-bins.org,"","Volkman, Tremblay and Bins",516-754-8751,volkman-tremblay-and-bins.org,20915 Merlin Wells,Auerfort,South Dakota,08840
+ ....
+ 1817  Raymond Von,Central Developer,rvon@kgr.org,682.618.8273,Kunze Group,218-843-9983,kgr.org,3490 Cristobal Points,Schoentown,VT,15253-0763
+ 1818  Luis Hilpert,Human Banking Technician,luis.hilpert@bergnaum.us,928-734-8307,Bergnaum Inc,302.406.7102 x2285,bergnaum.us,59468 Morissette Road,Mooreshire,HI,18433-6495
+ 1819: Elenor Monahan,Marketing Facilitator,elenor.monahan@lein.io,(417) 925-9559,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1820: Darren Bergnaum,Marketing Agent,darren.bergnaum@lein.io,414 484-5617,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1821  Filiberto Shields,Marketing Liaison,filiberto.shields@uphopanki.co,520 303-8258,"Upton, Hoppe and Kirlin",408-912-6706 x5253,uphopanki.co,6086 Hipolito Glen,Naderport,IL,23614-4172
+ 1822  Ozell Murazik,Legacy Representative,ozell.murazik@dooley-johnson-and-feest.biz,623.623.1949,"Dooley, Johnson and Feest",314 314-5970,dooley-johnson-and-feest.biz,981 Wolff Creek,Jillburgh,DE,88759-4307
+ ....
+ 1860  Iesha Dach,Marketing Officer,iesha.dach@kuvalis.com,330 281-7467,Kuvalis-Hahn,3149136769,kuvalis.com,485 Kim Ways,East Domingo,Nebraska,48709
+ 1861  Catrice Schimmel,Corporate Healthcare Officer,catrice.schimmel@rippin.co,435.214.3011,Grant-Gottlieb,3202039218,rippin.co,9615 Steuber Prairie,New Nedaberg,Idaho,05709-8837
+ 1862: Oliva Becker,Direct Manager,oliva.becker@lein.io,(262) 908-2318,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1863  Lucius Waters,Senior Marketing Executive,lucius.waters@mell.co,302 276-0517,Medhurst LLC,9705620443,mell.co,38511 Kenyetta Island,North Trishamouth,Colorado,19618
+ 1864  Wm Block,Direct Designer,wblock@wardkunde.io,941 631-4113,Schaden Inc,551.910.8953,wardkunde.io,4227 Gricelda Vista,East Earnestinebury,Texas,17450
+ ....
+ 1965  Maynard Gottlieb,Government Strategist,mgottlieb@schiller.org,"","Kohler, Purdy and Lockman",415 712-1256,schiller.org,23880 Schoen Junctions,Romagueraborough,West Virginia,02938-3110
+ 1966  Shari Sporer,Lead Technology Officer,ssporer@scgo.io,352.781.5358,Schultz-Gorczany,9563052717,scgo.io,4665 Ashley Extension,New Armando,CA,06234
+ 1967: Elvin Bernier,Direct Construction Coordinator,elvin.bernier@lein.io,,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 1968  Daniel O'Connell,Hospitality Agent,daniel.o'connell@uphopanki.co,413 602-2135,"Upton, Hoppe and Kirlin",408-912-6706 x5253,uphopanki.co,6086 Hipolito Glen,Naderport,IL,23614-4172
+ 1969  Aiko Oberbrunner,Principal Specialist,aiko.oberbrunner@ohancr.co,240 608-0046,"Ondricka, Hermann and Cruickshank",435-909-9191,ohancr.co,565 Medhurst Rest,South Jamaalborough,Rhode Island,92512
+ ....
+ 2027  Hong Rowe,Corporate Education Administrator,hrowe@volkman-tremblay-and-bins.org,848-502-0587,"Volkman, Tremblay and Bins",516-754-8751,volkman-tremblay-and-bins.org,20915 Merlin Wells,Auerfort,South Dakota,08840
+ 2028  Irwin MacGyver,Future Farming Designer,imacgyver@kgr.org,,Kunze Group,218-843-9983,kgr.org,3490 Cristobal Points,Schoentown,VT,15253-0763
+ 2029: Richelle Hermann,Legal Liaison,richelle.hermann@lein.io,270.917.0340 x3552,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 2030  Elisha Goldner,Future Advertising Facilitator,egoldner@ancro.co,518 650-6645,Ankunding-Cronin,408-520-6052,ancro.co,43251 Gerald Unions,East Cecil,MA,89977-0416
+ 2031  Brandon Little,Real-Estate Specialist,blittle@schuppe.com,6192108386,"Schuppe, Gaylord and Emard",8148083698,schuppe.com,6516 Thresa Throughway,South Willieburgh,North Carolina,12395
+ ....
+ 2078  Judson O'Conner,Investor Marketing Engineer,judson.o'conner@kshlerin.biz,"","Sawayn, Gibson and Baumbach",3174129936,kshlerin.biz,5993 Kelley Prairie,Ziemeshire,OR,75338-2315
+ 2079  Malisa Flatley,Human Administration Designer,mflatley@mkuanga.us,(760) 773-2814 x6636,"McCullough, Kulas and Gaylord",469 507-6702,mkuanga.us,802 Kihn Forges,West Damianhaven,AZ,78247-4895
+ 2080: Ronnie Carroll,Central Community-Services Assistant,ronnie.carroll@lein.io,847-830-7683 x2227,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 2081  Damian Cruickshank,Investor Government Architect,dcruickshank@stpanm.org,662-210-7877,"Stroman, Predovic and Murazik",4244789674,stpanm.org,68688 Strosin Mountains,West Joseberg,MA,02820-4412
+ 2082  Cinderella Kozey,Retail Architect,ckozey@denesik-hand-and-harvey.net,732-320-4041,"Denesik, Hand and Harvey",3518032657,denesik-hand-and-harvey.net,52818 Carissa Landing,Priceland,Montana,94821
+ ....
+ 2121  Kiera Collins,Chief Consulting Producer,kcollins@lianson.us,,Little and Sons,813-708-9863,lianson.us,463 Bode Island,Annettetown,OR,35883-6480
+ 2122  Almeda Pouros,IT Architect,almeda.pouros@kuvalis.com,207-251-5980,Kuvalis-Hahn,3149136769,kuvalis.com,485 Kim Ways,East Domingo,Nebraska,48709
+ 2123: Bertha Metz,Central Technician,bertha.metz@lein.io,724-609-1217 x4705,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 2124  Jeanie Tremblay,IT Director,jeanie.tremblay@kuhic.name,419.947.3698,"Brown, Walker and Nolan",(413) 863-3126 x3989,kuhic.name,,,,
+ 2125  Margart Kuphal,Central Manufacturing Representative,margart.kuphal@littlemonahan.name,9475011571,"Watsica, Smitham and Collier",786-662-1814,littlemonahan.name,5954 Corwin Forges,Lake Rodrickton,New Jersey,97971-2431
+ ....
+ 2159  Gerald Senger,Principal Legal Representative,gerald.senger@schultz.net,"",Schultz-Wunsch,8635137586,schultz.net,223 Kunze Mountains,North Faustino,OK,00717
+ 2160  Phuong Haag,Global Administrator,phaag@moore-feeney-and-dare.net,"","Moore, Feeney and Dare",973 557-2036,moore-feeney-and-dare.net,78352 Rippin Throughway,East Olin,DE,24215-7438
+ 2161: Rosanna Lubowitz,Customer Liaison,rosanna.lubowitz@lein.io,719 208-7499,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 2162  Barton Leffler,Marketing Liaison,barton.leffler@hang.biz,862.901.7825,Hand-Grant,832-650-3036,hang.biz,11420 Doyle Center,Hahnside,Rhode Island,15951
+ 2163  Kelly Shanahan,Investor Administration Executive,kshanahan@cremin.info,917.563.1689,Cremin and Sons,9792690054,cremin.info,3807 Johnston Curve,East Brandyside,South Carolina,53844-4505
+ ....
+ 2173  Chris Cremin,Investor Associate,ccremin@scgo.io,7636602081,Schultz-Gorczany,9563052717,scgo.io,4665 Ashley Extension,New Armando,CA,06234
+ 2174  Hailey Kunde,Marketing Executive,hailey.kunde@leuschke-group.co,(858) 252-2150,Leuschke Group,805-509-6514,leuschke-group.co,82905 Necole Way,New Michalebury,Nevada,38498
+ 2175: Lakeshia Paucek,Chief Hospitality Liaison,lakeshia.paucek@lein.io,(772) 405-2603,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 2176  Randall Bednar,Investor Assistant,rbednar@pfqui.info,,Pfannerstill-Quigley,8044135373,pfqui.info,78434 Shondra Islands,Nitzscheport,South Dakota,05966-2151
+ 2177  Marcene Borer,Central Real-Estate Associate,mborer@bartell-buckridge.net,530-339-5073,Bartell-Buckridge,586-701-9748,bartell-buckridge.net,1684 Olin Squares,East Nicole,Connecticut,17863-5927
+ 2178  Raven Sawayn,Mining Facilitator,raven.sawayn@greennader.info,,Ankunding-Fahey,217 618-0437,greennader.info,9362 Leandro Spring,Chrisview,ME,10226-4200
+ 2179: Darrick Sauer,Internal Marketing Engineer,darrick.sauer@kohler.io,8483169648,Williamson-Rau,408 775-6508,kohler.io,7052 Powlowski Rapid,Port Daniel,MO,68296
+ 2180  Jewell Runolfsdottir,Corporate Officer,jewell.runolfsdottir@littlemonahan.name,334 239-8911,"Watsica, Smitham and Collier",786-662-1814,littlemonahan.name,5954 Corwin Forges,Lake Rodrickton,New Jersey,97971-2431
+ 2181  Robert Rogahn,Lead Construction Associate,robert.rogahn@waelchi-inc.co,504.626.6523,Waelchi Inc,3133341012,waelchi-inc.co,54835 Myrtis Way,East Kelli,MI,45923-3238
+ ....
+ 2226  Dick Turner,Manufacturing Assistant,dturner@metz-botsford.us,,Metz-Botsford,9088304681,metz-botsford.us,672 Metz Village,Bradyborough,VT,89680-8697
+ 2227  Milo Lebsack,Legacy Advertising Coordinator,milo.lebsack@orn-greenholt-and-bogan.name,360 413-9915,"Orn, Greenholt and Bogan",847 469-0311,orn-greenholt-and-bogan.name,886 Towne Points,West Luke,New Hampshire,47511
+ 2228: Bernie Walter,Principal Marketing Supervisor,bernie.walter@kohler.io,,Williamson-Rau,408 775-6508,kohler.io,7052 Powlowski Rapid,Port Daniel,MO,68296
+ 2229  Glinda Hodkiewicz,Government Associate,ghodkiewicz@buckridge.co,4253344268,Goldner-Hudson,(785) 651-2429 x2193,buckridge.co,9361 Purdy Dale,Murphyborough,WA,00210-6672
+ 2230  Judson Wyman,Customer Advertising Developer,judson.wyman@roberts-kuvalis-and-schultz.org,704.417.9165,"Roberts, Kuvalis and Schultz",2064015802,roberts-kuvalis-and-schultz.org,789 Bruen Corner,North Mark,Montana,02617-5382
+ ....
+ 2235  George Wuckert,Central Officer,gwuckert@fadel-kessler-and-block.com,732 605-9985,"Fadel, Kessler and Block",573 503-7635,fadel-kessler-and-block.com,24821 Hirthe Village,Port Hertamouth,Utah,31158
+ 2236  Davis DuBuque,Investor Manufacturing Developer,davis.dubuque@schultz.net,,Schultz-Wunsch,8635137586,schultz.net,223 Kunze Mountains,North Faustino,OK,00717
+ 2237: Titus Dickens,Customer Assistant,titus.dickens@kohler.io,941-530-8846 x3321,Williamson-Rau,408 775-6508,kohler.io,7052 Powlowski Rapid,Port Daniel,MO,68296
+ 2238  Ken Hilll,Human Planner,ken.hilll@kuvalis-zieme-and-roberts.org,(703) 781-3974,"Kuvalis, Zieme and Roberts",937 630-3532,kuvalis-zieme-and-roberts.org,,,,
+ 2239  Hung Graham,Chief Associate,hgraham@metz-botsford.us,(504) 319-5790,Metz-Botsford,9088304681,metz-botsford.us,672 Metz Village,Bradyborough,VT,89680-8697
+ ....
+ 2244  Shaniqua Breitenberg,Dynamic Retail Engineer,shaniqua.breitenberg@west-group.biz,713-386-6131,West Group,765 650-9285,west-group.biz,137 Hand Mountain,Lake Rachelleview,LA,66482-3511
+ 2245  Zana West,Banking Administrator,zana.west@conf.org,"",Conroy-Farrell,540 865-4086,conf.org,6383 Rubin Roads,Kunzeview,MN,71308
+ 2246: Silas Ferry,Global Hospitality Orchestrator,silas.ferry@lein.io,3605706010,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 2247  Laurel Blick,Global Legal Administrator,lblick@labadie-prosacco.org,"",Labadie-Prosacco,6204347138,labadie-prosacco.org,4117 Mertz Land,North Maudeburgh,California,98390
+ 2248  Maximina Gaylord,Community-Services Technician,mgaylord@metz-botsford.us,(305) 501-9248,Metz-Botsford,9088304681,metz-botsford.us,672 Metz Village,Bradyborough,VT,89680-8697
+ ....
+ 2257  Manie Simonis,District Retail Executive,manie.simonis@litin.com,"",Littel Inc,9419793273,litin.com,,,,
+ 2258  Wilfredo Wintheiser,National Banking Analyst,wilfredo.wintheiser@ohancr.co,"","Ondricka, Hermann and Cruickshank",435-909-9191,ohancr.co,565 Medhurst Rest,South Jamaalborough,Rhode Island,92512
+ 2259: Belva Pfannerstill,Community-Services Producer,belva.pfannerstill@lein.io,562.908.9102,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 2260  Roselee Schulist,Corporate Orchestrator,rschulist@mueller-prosacco-and-vandervort.io,469-772-4526,"Mueller, Prosacco and Vandervort",904-407-9976,mueller-prosacco-and-vandervort.io,556 Kathleen Fields,Port Ladonnashire,Rhode Island,41994-0403
+ 2261  Irmgard Rippin,Future Technology Architect,irmgard.rippin@kuvalis.com,614 912-4870,Kuvalis-Hahn,3149136769,kuvalis.com,485 Kim Ways,East Domingo,Nebraska,48709
+ ....
+ 2362  Kylie Torphy,Product Architect,ktorphy@volkman.net,,"Volkman, Dibbert and Rippin",949-775-0303,volkman.net,70712 Bergstrom Cliffs,North Pia,AL,30226-3592
+ 2363  Suzanne Rolfson,Investor Healthcare Coordinator,suzanne.rolfson@rippin.co,641.708.4604,Grant-Gottlieb,3202039218,rippin.co,9615 Steuber Prairie,New Nedaberg,Idaho,05709-8837
+ 2364: King Kihn,Investor Education Technician,king.kihn@lein.io,609-323-4370,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 2365  Lavada Hahn,Product Technology Strategist,lavada.hahn@krc.name,,Kreiger-Considine,3084246985,krc.name,70441 Stephan Harbor,Angilachester,MO,39613-0586
+ 2366  Valentina Rempel,Mining Coordinator,valentina.rempel@torp-macejkovic-and-jones.us,6363529478,"Torp, Macejkovic and Jones",731-667-3161 x9867,torp-macejkovic-and-jones.us,8153 Alden Keys,West Charlie,AR,19561-3024
+ ....
+ 2404  Enda Jacobi,Mining Strategist,enda.jacobi@ohancr.co,5173146361,"Ondricka, Hermann and Cruickshank",435-909-9191,ohancr.co,565 Medhurst Rest,South Jamaalborough,Rhode Island,92512
+ 2405  Estelle Rosenbaum,Product Planner,erosenbaum@grady-stoltenberg.org,,Grady-Stoltenberg,828 445-8179,grady-stoltenberg.org,,,,
+ 2406: Man Fay,Manufacturing Director,man.fay@lein.io,334-617-7409,Lesch Inc,218.203.5671,lein.io,7359 Sterling Rapids,South Tysonshire,NE,42819-4031
+ 2407  Nisha Ledner,Technology Director,nledner@blandasimonis.info,8578454549,Kozey Group,406 213-7341,blandasimonis.info,4927 Bergnaum Spring,Port Ty,NV,78250
+ 2408  Diego Hane,Lead Coordinator,dhane@moore-feeney-and-dare.net,313 316-6608,"Moore, Feeney and Dare",973 557-2036,moore-feeney-and-dare.net,78352 Rippin Throughway,East Olin,DE,24215-7438
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/log/development.log:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/test/controllers/api/organizations_controller_test.rb:
+    1  require 'test_helper'
+    2  
+    3: class api::OrganizationsControllerTest < ActionDispatch::IntegrationTest
+    4    # test "the truth" do
+    5    #   assert true
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/test/controllers/api/people_controller_test.rb:
+    1  require 'test_helper'
+    2  
+    3: class api::PeopleControllerTest < ActionDispatch::IntegrationTest
+    4    # test "the truth" do
+    5    #   assert true
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/test/fixtures/addresses.yml:
+    1: # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+    2  
+    3  one:
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/test/fixtures/organizations.yml:
+    1: # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+    2  
+    3  one:
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/test/fixtures/people.yml:
+    1: # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+    2  
+    3  one:
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-load-path-cache:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/02/221c3941421a35:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/0f/feaa01bbf1cfa0:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/14/0de763ccd809a0:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/20/7d2620d59efb6c:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/31/5646781ddd0f24:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/37/d9673229ed2604:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/38/cc59e4ecf7e875:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/43/906e729a5afee8:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/4a/8ac6ed1dfe0b84:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/4c/67ad7d2639742a:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/4f/364465a5842308:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/51/1ebab676e7a2af:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/58/0ef4e715cde311:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/60/6ef7e89666b24c:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/60/d498be90fea785:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/61/e13e6abe42b454:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/64/8ce20c776bb95f:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/69/77da163f8e1b79:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/79/67034137588147:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/84/87fc7ce3459b12:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/85/4f4be4b829905e:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/86/58c3a11374fb1b:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/8a/e625b52ad6e268:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/95/a56348e8d005a8:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/9f/fe648df8317832:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/a0/c856b182338fec:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/a8/5870a76f8e9969:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/b0/a78696b2255efb:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/ba/03a9217d98d98c:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/bd/6de188e6e2c2fd:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/c0/c1ac196287b577:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/c4/d9b29de27e12d5:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/d1/7a36a60761198c:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/d1/986626b60d2f0b:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/de/cd14519baf8b44:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/df/06d99d90ffb60b:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/e2/1009dd533dd97d:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/e4/7dd9d896519fbc:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/ef/8ccd4d2bee496b:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/f4/c6c5cc4f0efdbe:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/f4/e272a0066d5ed3:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/f8/aa85327a1fec1c:
+    <binary>
+
+/Users/emmy1238/Actualize/synap-ruby-exercise/tmp/cache/bootsnap-compile-cache/fa/888b5476601ca6:
+    <binary>
+
+289 matches across 59 files
